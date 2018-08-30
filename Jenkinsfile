@@ -10,4 +10,7 @@ pipeline {
       }
     }
   }
+  environment {
+    MY_NAME = 'RULER OF ALL '
+  }
 }
