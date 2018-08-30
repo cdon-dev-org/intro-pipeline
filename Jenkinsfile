@@ -23,6 +23,16 @@ pipeline {
             sleep(time: 10, unit: 'SECONDS')
           }
         }
+        stage('Checkpoint') {
+          steps {
+            checkpoint 'Checkpoint'
+          }
+        }
+        stage('Deploy') {
+          steps {
+            echo 'Deploying....'
+          }
+        }
         stage('Java 9') {
           agent {
             label 'jdk9'
